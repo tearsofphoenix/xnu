@@ -37,6 +37,10 @@ void PE_init_SocSupport_sun4i(void);
 void PE_init_SocSupport_omap3(void);
 #endif
 
+#if defined(BOARD_CONFIG_RASPBERRYPI)
+void PE_init_SocSupport_raspberrypi(void);
+#endif
+
 typedef void (*SocDevice_Uart_Putc)(char c);
 typedef int (*SocDevice_Uart_Getc)(void);
 typedef void (*SocDevice_Uart_Initialize)(void);

@@ -588,8 +588,10 @@ export LDFLAGS_KERNEL	= $(LDFLAGS_KERNEL_GEN) \
 #
 # Default runtime libraries to be linked with the kernel
 #
+ifeq ($(MACHINE_CONFIG),RASPBERRYPI)
+else
 export LD_KERNEL_LIBS	= -lcc_kext
-
+endif
 
 #
 # Default INCFLAGS

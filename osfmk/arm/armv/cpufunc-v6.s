@@ -192,6 +192,7 @@ ENTRY_NP(arm_idcache_wbinv_all)
 	/* Fall through to purge Dcache. */
 
 /* LINTSTUB: void arm_dcache_wbinv_all(void); */
+ENTRY(arm_dcache_inv_all)
 ENTRY(arm_dcache_wbinv_all)
 	mcr	p15, 0, r0, c7, c14, 0	/* clean & invalidate D cache */
 	mcr	p15, 0, r0, c7, c10, 4	/* drain the write buffer */
